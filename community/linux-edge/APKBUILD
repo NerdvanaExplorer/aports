@@ -28,16 +28,12 @@ case $pkgver in
 	https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/patch-$pkgver.xz" ;;
 esac
 
-	source="$source
-	config-edge.aarch64
-	config-edge.armv7
-	config-edge.x86_64
-	config-edge.riscv64
-	config-edge4virt.aarch64
-	config-edge4virt.armv7
-	config-edge4virt.x86_64
-	config-edge4virt.riscv64
-	"
+        source="$source
+        config-edge.aarch64
+        config-edge.armv7
+        config-edge.x86_64
+        config-edge.riscv64
+        "
 
 arch="armv7 aarch64 x86_64 riscv64"
 license="GPL-2.0"
@@ -227,10 +223,6 @@ sha512sums="
 fd6bc0e9cc8ba2e0d0060e1385d97a6948b9e75fcaa59c01f3b99ca4d6c3dbea7a09d6bf4893975b1cde8c51bb01766bbe58df1fae4261b5b62fbe4ca380e14e  patch-5.17.5.xz
 416c87e7abe0af591da380eb5789c8e1aee85276f7c916e84fb50c330a27cebeccbc52f0d926dd51e8a80da0aede3f45ce2b86005cbaa4eafa023a90440e89c2  config-edge.aarch64
 09656d15fc0c16cb2b7cf45548a9c4a729606bc5e3b95585e82ebe3214611393b96fc67c4f4c2aaafe380e602f19f5341eb162d012d510480b9acc386016d446  config-edge.armv7
-4b2bb6ace25b3d9766a46c4e6fa0405cdf2cce4afe71103d0338242a424d902ff0e8d99ba3e833de3cc5874dd00df73b00765b1f5852eeab2cf8bd4deef6859e  config-edge.x86_64
+bfffcaf28d6f4f7f4e2f1732ee74e54b3c1b80e409584a4789ad3fdf8e21c67aa34bb14840f24170681a2e86eaa0993ee528949257ffe464ff86186b0930abf0  config-edge.x86_64
 28006b25249584630ad0a12a77d0c32a3bfd0a4dcafeb312cd29cfb38df007ad30f7f6bbc65df2262dddf63d1eb143901a1adca1d01d56f909038be563589785  config-edge.riscv64
-755502e5820561f921e7f0447021781549152b20e45ca5c5cecc005b7efdabc6b659096a8af22822f02f48c78dfcb1e1a75dff86d137bcb9627d767195507b0b  config-edge4virt.aarch64
-e0191d71fa6e125a6a2ceb755b4184c318bdbd5823c3a082bde3b37cea2ba431695f25cb27721561ca6a06718305d38f92cf191acd523f713718035682bbb8e8  config-edge4virt.armv7
-d11c7451703d19cfdec8ff4199637247309990be189ccda16dbb52a026c3ae8e603063085fb10750c8bdca059133587162de2aae96d14886c33d62211fc6394d  config-edge4virt.x86_64
-118cd4de358e5c939792e0d32141d38a931059d7df0c03628cff998c41c4f6cc68c59db3e829399657f4ba7420c7eaaaf15878267055bd7cea1481d6bfe50f5e  config-edge4virt.riscv64
 "
