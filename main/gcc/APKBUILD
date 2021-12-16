@@ -17,7 +17,7 @@ license="GPL-2.0-or-later LGPL-2.1-or-later"
 _gccrel=$pkgver-r$pkgrel
 depends="binutils$_target"
 makedepends_build="gcc$_cross g++$_cross bison flex texinfo gawk zip gmp-dev mpfr-dev mpc1-dev zlib-dev"
-makedepends_host="linux-headers gmp-dev mpfr-dev mpc1-dev isl-dev zlib-dev !gettext-dev libucontext-dev"
+makedepends_host="linux-headers gmp-dev mpfr-dev mpc1-dev isl-dev zlib-dev libucontext-dev"
 subpackages=" "
 [ "$CHOST" = "$CTARGET" ] && subpackages="gcc-doc$_target"
 replaces="libstdc++ binutils"
@@ -27,7 +27,8 @@ replaces="libstdc++ binutils"
 : "${LANG_OBJC:=true}"
 : "${LANG_GO:=true}"
 : "${LANG_FORTRAN:=true}"
-: "${LANG_ADA:=true}"
+# This breaks being unable to find xcalloc at link time for some reason?
+: "${LANG_ADA:=false}"
 : "${LANG_JIT:=true}"
 
 _libgomp=true
