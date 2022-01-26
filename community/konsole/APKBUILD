@@ -42,7 +42,8 @@ makedepends="
 checkdepends="xvfb-run"
 source="https://download.kde.org/stable/release-service/$pkgver/src/konsole-$pkgver.tar.xz
 	0001-fix-musl-compatibility.patch
-	"
+        remove-tab-toolbar.patch
+        "
 subpackages="$pkgname-doc $pkgname-lang"
 
 build() {
@@ -69,4 +70,5 @@ package() {
 sha512sums="
 014169155c7f68bebfaa4806d1cc649435c2f4ca3c83054063f36de3111a87997dc7c6baea8858628662a06df919186c411b1904a1b46e3f03eb7ecc340ee6db  konsole-22.04.0.tar.xz
 6f9f5eb53629df0392abe26391a137c3bb9ced79dbf3e649d99046318d6c897e5803bc31eeb25fd042ce24c4f124a5b0fede8c90eb2b4a5682d46826e4e9c44c  0001-fix-musl-compatibility.patch
+0575e071b2120298d2b15cb40ecc0a81881cf8fe36e1491f3db4d6a8a363981387026ced0ee175b197e83b504f12c8012c426d0c9c8afe457be81a350c3d5171  remove-tab-toolbar.patch
 "
